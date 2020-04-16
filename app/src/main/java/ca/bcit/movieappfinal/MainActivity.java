@@ -52,17 +52,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
+
                     List<String> titles = new ArrayList<>();
                     List<String> descriptions = new ArrayList<>();
                     final List<String> urls = new ArrayList<>();
+
                     ListView listView = findViewById(R.id.list);
                     for (QueryDocumentSnapshot document : task.getResult()) {
                         titles.add((String) document.get("title"));
                         descriptions.add((String) document.get("description"));
                         urls.add((String) document.get("url"));
                     }
+
                     CustomListAdapter customListAdapter = new CustomListAdapter(MainActivity.this, titles, descriptions, urls);
                     listView.setAdapter(customListAdapter);
+
                     listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
