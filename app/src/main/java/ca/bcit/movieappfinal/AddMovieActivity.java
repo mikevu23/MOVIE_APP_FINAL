@@ -50,8 +50,6 @@ public class AddMovieActivity extends AppCompatActivity {
         String description = movieDescription.getText().toString();
         String url = movieUrl.getText().toString();
 
-
-
         Movie movie = new Movie(title, description, url);
 
         movieRef.set(movie)
@@ -72,71 +70,6 @@ public class AddMovieActivity extends AppCompatActivity {
 
         Intent addNewMovie = new Intent(AddMovieActivity.this, MainActivity.class);
         startActivity(addNewMovie);
-
-        // Create a new user with a first and last name
-//        Map<String, Object> movie = new HashMap<>();
-//        movie.put("title", title);
-//        movie.put("description", description);
-//        movie.put("url", url);
     }
-
-//        Movie movie = new Movie(title, description, url);
-
-
-
-
-
-
-
-
-//        public void saveNote(View v) {
-//            String title = editTextTitle.getText().toString();
-//            String description = editTextDescription.getText().toString();
-//
-//            Note note = new Note(title, description);
-//
-//            movieRef.set(note)
-//                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-//                        @Override
-//                        public void onSuccess(Void aVoid) {
-//                            Toast.makeText(MainActivity.this, "Note saved", Toast.LENGTH_SHORT).show();
-//                        }
-//                    })
-//                    .addOnFailureListener(new OnFailureListener() {
-//                        @Override
-//                        public void onFailure(@NonNull Exception e) {
-//                            Toast.makeText(MainActivity.this, "Error!", Toast.LENGTH_SHORT).show();
-//                            Log.d(TAG, e.toString());
-//                        }
-//                    });
-//        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
+}
 
