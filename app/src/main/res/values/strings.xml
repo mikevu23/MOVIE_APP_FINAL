@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MovieAppFinal</string>
+    <string name="add_button">Add Movie</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="url">URL</string>
+    <string name="addButton">Add</string>
+</resources>
